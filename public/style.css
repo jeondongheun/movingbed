@@ -1,0 +1,200 @@
+.movingbed {
+    width: 100%; /* 부모 요소에 맞게 폭을 조정 */
+    max-width: 269px; /* 최대 폭 설정 */
+    height: 62px;
+    color: #000;
+    font-family: "Architects Daughter", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute; /* 절대 위치 설정 */
+    top: 50px; /* 위에서 78픽셀 떨어짐 */
+    left: 50%; /* 부모 요소의 가운데 정렬 */
+    transform: translateX(-50%); /* 수평 가운데 정렬 보정 */
+}
+
+.frame {
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh; /* Viewport height: 화면 높이에 맞게 설정 */
+    background-color: white; /* 프레임 배경을 하얀색으로 설정 */
+    display: flex;
+    flex-direction: column; /* 세로 정렬을 위해 설정 */
+    align-items: center;
+    justify-content: center;
+    position: relative; /* .movingbed의 절대 위치 기준 */
+    border: 2px solid black; /* 테두리 두께와 색상 설정 */
+}
+
+.frame2 {
+    width: 100%;
+    max-width: 1440px;
+    height: 1850px; /* Viewport height: 화면 높이에 맞게 설정 */
+    background-color: white; /* 프레임 배경을 하얀색으로 설정 */
+    display: flex;
+    flex-direction: column; /* 세로 정렬을 위해 설정 */
+    align-items: center;
+    justify-content: center;
+    position: relative; /* .movingbed의 절대 위치 기준 */
+    border: 2px solid black; /* 테두리 두께와 색상 설정 */
+}
+
+.text-item {
+    color: #000; /* 텍스트 색상 */
+    font-family: "Architects Daughter"; /* 폰트 패밀리 */
+    font-size: 20px; /* 폰트 크기 */
+    font-style: normal; /* 폰트 스타일 */
+    font-weight: 400; /* 폰트 두께 */
+    line-height: normal; /* 줄 높이 */
+    position: absolute; /* 절대 위치 설정 */
+    top: 150px; /* 위에서 204픽셀 떨어짐 */
+    cursor: pointer;
+}
+
+.portfolio {
+    right: calc(5% + 150px); /* 가운데 정렬을 위해 왼쪽에서 50% 위치로 */
+}
+
+.home {
+    right: calc(5% + 280px); /* portfolio의 왼쪽에서 138px + 130px 만큼 왼쪽으로 떨어짐 */
+}
+
+.introduction {
+    right: 5% /* portfolio의 오른쪽에서 138px + 130px 만큼 오른쪽으로 떨어짐 */
+}
+
+.tell{
+    top: 600px;
+}
+
+.menu_button {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 50px;
+    height: 40px;
+    flex-shrink: 0;
+    background: url('../public/src/menu_button.png') lightgray 50% / cover no-repeat;
+    cursor: pointer;
+}
+
+.bed {
+    position: absolute;
+    top: 270px;
+    width: 226px;
+    height: 306px;
+    flex-shrink: 0;
+    background: url('../public/src/bed.jpg') lightgray 50% / cover no-repeat;
+}
+
+.doll {
+    position: absolute;
+    top: 270px;
+    width: 226px;
+    height: 306px;
+    flex-shrink: 0;
+    background: url('../public/src/doll.jpg') lightgray 50% / cover no-repeat;
+}
+
+.btext{
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    bottom: 10px; /* 아래에서 10픽셀 떨어짐 */
+}
+
+.copy{
+    left: 380px;
+}
+
+.info{
+    left: 630px;
+}
+
+.menu_panel {
+    position: fixed; /* 고정 위치 */
+    top: 0;
+    left: -30%; /* 왼쪽에서 숨김 */
+    width: 20%; /* 프레임 너비의 30% */
+    height: 100vh; /* 프레임 높이와 동일 */
+    background-color: white; /* 하얀색 배경 */
+    transition: left 0.3s ease; /* left 속성에 대한 애니메이션 효과 설정 */
+    z-index: 1001; /* 오버레이보다 위에 보이도록 설정 */
+    padding-top: 50px; /* 상단 여백 */
+}
+
+.menu_links li a {
+    font-family: "Architects Daughter"; /* 폰트 패밀리 */
+    color: black; /* 글씨 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+    display: block;
+    padding: 10px;
+}
+
+.menu_links li a:hover {
+    background-color: #f0f0f0; /* 호버 효과 */
+}
+
+.menu_panel.open {
+    left: 0; /* 왼쪽에서 메뉴창 표시 */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 어두운 배경 */
+    z-index: 1000; /* 메뉴 패널 아래에 위치 */
+    display: none; /* 기본적으로 숨김 */
+}
+
+.overlay.open {
+    display: block; /* 오버레이 표시 */
+}
+
+/*chatbot*/
+
+.input-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px; /* 20px 간격 추가 */
+    padding: 20px;
+    margin: 150px auto 0; /* 위로 50px 올리기 위해 상단 마진 조정 */
+}
+
+.input-container input {
+    width: 300px; /* 가로 300픽셀 */
+    height: 100px; /* 세로 100픽셀 */
+    border: 1px solid #ccc; /* 테두리 추가 */
+    border-radius: 5px; /* 둥근 모서리 추가 */
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px; /* 글자 크기 설정 */
+    color: #333; /* 글자 색상 설정 */
+    overflow: auto; /* 내용이 넘치면 스크롤바 표시 */
+}
+
+.output-container {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* 입력 박스들로부터 20px 아래에 위치 */
+}
+
+#user-output {
+    width: 620px; /* 가로 620픽셀 */
+    height: 350px; /* 세로 350픽셀 */
+    border: 1px solid #ccc; /* 테두리 추가 */
+    border-radius: 5px; /* 둥근 모서리 추가 */
+    padding: 20px; /* 내부 여백 추가 */
+    box-sizing: border-box;
+    font-size: 16px; /* 글자 크기 설정 */
+    color: #333; /* 글자 색상 설정 */
+    overflow-y: auto; /* 필요 시 스크롤 추가 */
+}

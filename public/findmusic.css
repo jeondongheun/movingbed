@@ -1,0 +1,25 @@
+.search-container {
+    top: -200px;
+    text-align: center;
+    width: 50%; /* 검색창이 전체 너비를 차지하도록 설정 */
+    position: relative; /* 위치 조정을 위한 상대 위치 지정 */
+}
+
+.result-container {
+    top: 350px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pretzel {
+    position: absolute;
+    top: 270px;
+    width: 226px;
+    height: 306px;
+    flex-shrink: 0;
+    background: url('../public/src/pretzel.jpg') lightgray 50% / cover no-repeat;
+}
