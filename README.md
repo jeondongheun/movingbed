@@ -1,5 +1,5 @@
 # movingbed
-간단한 포트폴리오 및 프로젝트 시연 사이트
+간단한 포트폴리오 및 프로젝트 시연 사이트 (html + css + js 실습)
 
 <img width="1116" alt="스크린샷 2024-07-26 오후 1 52 51" src="https://github.com/user-attachments/assets/1a139e1f-714a-4f3f-8e5c-19bd13dd062e">
 
